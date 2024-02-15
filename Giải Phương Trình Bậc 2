@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int a=0;
+	int b=0;
+	int c=0;
+	printf("Giai Phuong Trinh Bac 2:");
+		printf("\nMoi Ban Nhap a:");
+	scanf("%d",&a);
+		printf("\nMoi Ban Nhap b:");
+	scanf("%d",&b);
+		printf("\nMoi Ban Nhap c:");
+	scanf("%d",&c);
+	if(a==0){
+		if(c==0){
+			printf("\nPhuong Trinh Co Nghiem x = 0");
+		}else{
+			if(b==0){
+				printf("\nPhuong Trinh Vo Nghiem");
+			}else{
+				printf("\nPhuong Trinh Co Nghiem x = %f",(float)-c/b);
+			}
+		}
+	}else{
+		double delta = pow(b,2)-4*a*c;
+		if(delta>0){
+			printf("\nNghiem Thu Nhat La:%lf",(double)(-b-sqrt(delta))/(2*a));
+			printf("\nNghiem Thu Nhat Hai:%lf",(double)(-b+sqrt(delta))/(2*a));
+		}else{
+			if(delta==0){
+				printf("\nPhuong Trinh Co Nghiem Duy Nhat La:%lf",(double)((-b)/(2*a)));
+			}else{
+				printf("\nPhuong Trinh Vo Nghiem");
+			}
+		}
+	}
+	return 0;
+}
